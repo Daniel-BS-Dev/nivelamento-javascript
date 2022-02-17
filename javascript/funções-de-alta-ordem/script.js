@@ -57,7 +57,7 @@ function produto(x, y) {
 }
 
 const r1 = list1.reduce(soma);
-const r2 = list2.reduce(soma, 0);
+const r2 = list2.reduce(soma, 0); // adicionando o parametro opcional
 const r3 = list1.reduce(produto, 1);
 
 console.log("REDUCE ------------------------");
@@ -75,7 +75,7 @@ function compararPorTamanho(s1, s2) {
 
 console.log("SORT -----------------------------");
 
-const s1 = [...nomes].sort();
+const s1 = [...nomes].sort();// [... cria uma copia do vetor]
 console.log(s1);
 
 const s2 = [...nomes].sort(compararPorTamanho);

@@ -79,15 +79,112 @@ console.log(`Tipo de ${num4}: ${typeof num4}`);
 console.log("Funções de string");
 
 const str = "Maria Silva  ";
-console.log(`const str = "Maria Silva  "`);
 
 console.log(`toLowerCase: ${str.toLowerCase()}`);
 console.log(`toUpperCase: ${str.toUpperCase()}`);
-console.log(`charAt: ${str.charAt(3)}`);
-console.log(`replace (primeiro): ${str.replace("i", "$", )}`);
-console.log(`replace (todos): ${str.replace(/i/g, "$", )}`);
+console.log(`charAt: ${str.charAt(3)}`); // pegando a quarta letra
+console.log(`charAt: ${str[3]}`);        // pegando a quarta letra
+console.log(`replace (primeiro): ${str.replace("i", "$", )}`); // trocando o primeiro i por $
+console.log(`replace (todos): ${str.replace(/i/g, "$", )}`); // trocando o todos os i por $
+console.log(`replace (todos): ${str.replaceAll('i', "$", )}`); // trocando o todos os i por $
 console.log(`length: ${str.length}`);
 console.log(`indexOf: ${str.indexOf("i")}`);
 console.log(`lastIndexOf: ${str.lastIndexOf("i")}`);
-console.log(`subtring: ${str.substring(3, 8)}`);
+console.log(`subtring: ${str.substring(3, 8)}`); // primeiro numero, onde o corte começa, segundo numero final do corte
 console.log(`trim: ${str.trim()}`);
+
+//operadores
+console.log("Operadores aritméticos");
+console.log(`3 + 4 = ${3 + 4}`);
+console.log(`3 - 4 = ${3 - 4}`);
+console.log(`3 * 4 = ${3 * 4}`);
+console.log(`19 / 3 = ${19 / 5}`);
+console.log(`19 % 3 = ${19 % 5}`); // reto da divisão
+console.log(`3 ** 4 = ${3 ** 4}`); // numero vezes ele tres vezes
+
+console.log("Operadores comparativos");
+console.log(`10 > 5 = ${10 > 5}`);
+console.log(`10 < 5 = ${10 < 5}`);
+console.log(`10 >= 5 = ${10 >= 5}`);
+console.log(`10 <= 5 = ${10 <= 5}`);
+
+console.log("Operadores comparativos de igualdade");
+console.log(`"" == false: ${"" == false}`);
+console.log(`"" === false: ${"" === false}`);
+console.log(`"17" == 17: ${"17" == 17}`);
+console.log(`"17" === 17: ${"17" === 17}`);
+
+console.log("Operadores comparativos de igualdade");
+const x3 = "Maria";
+const y3 = "Maria";
+const a3 = new String("Maria");
+const b3 = new String("Maria");
+console.log(`const x = "Maria"`);
+console.log(`const y = "Maria"`);
+console.log(`const a = new String("Maria")`);
+console.log(`const b = new String("Maria"`);
+console.log(`x === y: ${x3 === y3}`);
+console.log(`a === b: ${a3 === b3}`);
+console.log(`typeof x: ${typeof x3}`);
+console.log(`typeof a: ${typeof a3}`);
+
+console.log("Operadores lógicos");
+console.log(`(10 > 5) && (10 > 20): ${(10 > 5) && (10 > 20)}`);
+console.log(`(10 > 5) && (10 < 20): ${(10 > 5) && (10 < 20)}`);
+console.log(`(10 > 5) || (10 > 20): ${(10 > 5) || (10 > 20)}`);
+console.log(`(10 < 5) || (10 > 20): ${(10 > 5) && (10 > 20)}`);
+console.log(`!(10 > 5): ${!(10 > 5)}`);
+
+//estrutura de repetição
+const time = 19;
+
+if (time < 12) {
+  console.log("Bom dia");
+} else if (time < 18) {
+  console.log("Boa tarde");
+} else {
+  console.log("Boa noite");
+}
+
+const week = 3;
+switch (week) {
+  case 1:
+    console.log("Domingo");
+    break;
+  case 2:
+    console.log("Segunda");
+    break;
+  case 3:
+    console.log("Terça");
+    break;
+  case 4:
+    console.log("Quarta");
+    break;
+  case 5:
+    console.log("Quinta");
+    break;
+  case 6:
+    console.log("Sexta");
+    break;
+  case 7:
+    console.log("Sábado");
+    break;
+  default:
+    console.log("Valor inválido");
+}
+
+let count = 4;
+while (count > 0) {
+  console.log(`COUNT = ${count}`);
+  count--;
+}
+
+for (let i = 0; i < 4; i++) {
+  console.log(`I = ${i}`);
+}
+
+let test = 4;
+do {
+  console.log(`TEST = ${test}`);
+  test--;
+} while (test > 0);
